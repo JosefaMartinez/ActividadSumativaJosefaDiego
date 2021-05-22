@@ -1,0 +1,35 @@
+<form [formGroup]="formulario" (ngSubmit)="EnviarDatos()" novalidate>
+    <!--Titulo de la nota-->
+    <mat-form-field appearance="fill">
+        <!--Tiene que colocarse la información de la nota seleccionada-->
+        <mat-label>Nota</mat-label> 
+        <input 
+            type="text"
+            matInput 
+            formControlName="titulo"
+            placeholder="Titulo" 
+        />
+    </mat-form-field>
+
+    <!--Selección de estado-->
+    <mat-form-field appearance="fill">
+        <!--Opción de default-->
+        <mat-label>Select</mat-label>
+
+        <!--Opciones validas para el estado-->
+        <mat-select formControlName="estado" required>
+          <mat-option value="abierto">Abierto</mat-option>
+          <mat-option value="proceso">Proceso</mat-option>
+          <mat-option value="cerrado">Cerrado</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+      <!--Descripción-->
+      <mat-form-field appearance="fill">
+          <!--Va la descripción de la nota-->
+        <mat-label>Descripcion</mat-label>
+        <textarea matInput formControlName="descripcion" maxlength="150" required></textarea>
+      </mat-form-field>
+      <!--Se habilita el boton solo cuando esten todos los datos validos-->
+      <button mat-raised-button type="submit" [disabled]="formulario.invalid">Actualizar</button>
+</form>

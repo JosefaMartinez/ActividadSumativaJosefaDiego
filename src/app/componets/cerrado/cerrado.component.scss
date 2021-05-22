@@ -1,0 +1,41 @@
+li{
+    list-style: none;
+    width: 100%;
+}
+
+mat-card{
+    background-color: rgb(168, 220, 233);
+    margin-bottom: 10%;
+    margin-right: 10%;
+    width: 100%;
+}
+
+span{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+div{
+    margin-right: 13%;
+}
+
+/*a{
+    list-style: none;
+    color: black;
+}
+
+a:hover{
+    color:rgb(55, 151, 155);
+}*/
+
+button{
+    list-style: none;
+    background-color: rgb(168, 220, 233);
+    border: none;
+    width: 10%;
+}
+
+button:hover{
+    color:rgb(55, 151, 155);
+}

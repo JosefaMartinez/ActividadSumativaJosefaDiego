@@ -1,0 +1,14 @@
+<ul>
+    <li *ngFor="let item of ListaNotas">
+        <!--Se utilizar un elemento  de tarjetas de material Design-->
+        <mat-card> 
+            <span> 
+                <div>
+                    <mat-card-title>{{item.titulo}}</mat-card-title>
+                    <mat-card-content>{{item.descripcion}} </mat-card-content> 
+                </div>
+                <button (click)="remove(item)">X</button>
+            </span>
+        </mat-card > 
+    </li>
+</ul>
